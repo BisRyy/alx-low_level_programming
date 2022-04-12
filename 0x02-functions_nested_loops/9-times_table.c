@@ -15,7 +15,7 @@ void times_table(void)
 		{
 			a = j * l;
 			if ((a / 10) == 0)
-		    	{
+			{
 				_putchar((a % 10) + '0');
 			}
 			else
