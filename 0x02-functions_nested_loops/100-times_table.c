@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * print_times_table - check the code for ALX School students.
  * @n :- integer value
