@@ -1,46 +1,49 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * main - print table
- * @n: number used for table
- *
- * Return: void
+ * print_times_table - check the code for ALX School students.
+ * @n :- integer value
+ * Return: void.
  */
-void print_tables(int n)
+void print_times_table(int n)
 {
-	char i;
-	int j, cont;
+	int x, y, z;
 
-	if (n <= 15 && n >= 0)
+	if (n >= 0 && n < 15)
 	{
-		for (j = 0; j <= n; j++)
+		for (x = 0; x <= n; x++)
 		{
-			for (i = 0; i <= n; i++)
+			for (y = 0; y <= n; y++)
 			{
-				cont = j * i;
-				if (cont > 99)
+				z = x * y;
+				if (z > 99)
 				{
-					_putchar(cont / 100 + '0');
-					_putchar(cont / 10 + '0');
+					_putchar(44);
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
 				}
-				else if (cont > 9 && cont <= 99)
+				else if (z > 9)
 				{
-					_putchar(cont / 10 + '0');
+					_putchar(44);
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
 				}
-				_putchar(cont % 10 + '0');
-				else if (i < n)
+				else
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					if (y != 0)
+					{
+						_putchar(44);
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
 				}
 			}
-			if (j < n)
-			{
-				_putchar(10);
-			}
+			_putchar('\n');
 		}
 	}
 }
-
