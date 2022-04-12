@@ -4,7 +4,7 @@
  * @n :- integer value
  * Return: void.
  */
-void print_tables(int n)
+void times_table(int n)
 {
 	int x, y, z;
 
