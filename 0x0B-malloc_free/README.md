@@ -1,1 +1,1 @@
-# Dynamic memory allocation
+Introduction to C - malloc, free
